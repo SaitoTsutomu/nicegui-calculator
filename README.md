@@ -1,7 +1,11 @@
 # NiceGUI Calculator
 
-## usage
+NiceGUI Calculator is a calculator that runs on NiceGUI.
+
+## Usage
 
 ```
-python src/nicegui_calculator/main.py
+% calculator
 ```
+
+![](https://raw.githubusercontent.com/SaitoTsutomu/nicegui-calculator/master/images/main.png)

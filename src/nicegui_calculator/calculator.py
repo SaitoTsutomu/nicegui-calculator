@@ -6,10 +6,10 @@ class Calculator:
         self.value = "0"
         self.clear_at_next = False
 
-    def act(self, e, text: str = ""):
+    def act(self, e):
         value = "0" if self.clear_at_next else self.value
         self.clear_at_next = False
-        match text or e.sender.text:
+        match e.sender.text if hasattr(e, "sender") else e:
             case num if "0" <= num <= "9":
                 terms = value.split()
                 if terms[-1] in {"0", "-0"}:
@@ -48,5 +48,5 @@ class Calculator:
     def calc(cls, keys: list[str]) -> str:
         self = cls()
         for key in keys:
-            self.act(None, text=key)
+            self.act(key)
         return self.value

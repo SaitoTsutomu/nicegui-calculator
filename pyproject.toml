@@ -16,10 +16,13 @@ license = {text = "Apache-2.0"}
 name = "nicegui-calculator"
 readme = "README.md"
 requires-python = ">=3.11"
-version = "0.1.0"
+version = "0.1.1"
 
 [project.urls]
 homepage = "https://github.com/SaitoTsutomu/nicegui-calculator"
+
+[project.scripts]
+calculator = "nicegui_calculator:main"
 
 [tool.uv]
 dev-dependencies = [
