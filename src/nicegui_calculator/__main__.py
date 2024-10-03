@@ -1,4 +1,4 @@
 if __name__ in {"__main__", "__mp_main__"}:
-    from . import main
+    from nicegui_calculator import main
 
     main()
