@@ -19,6 +19,6 @@ def main():
         label.bind_text(calculator, "value")
         for row in rows:
             with ui.row():
-                for text, class_ in row:
-                    ui.button(text, on_click=calculator.act).classes(class_)
+                for text, classes in row:
+                    ui.button(text, on_click=calculator.act).classes(classes)
     ui.run(title="Calculator", reload=False, native=True, window_size=(360, 380), show_welcome_message=False)
