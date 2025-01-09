@@ -32,7 +32,7 @@ class Calculator:
                 self.value = str(float(self.value) / 100)
             case operand if operand in "/*-+=":
                 value = self.trim_operand(self.value)
-                value = str(eval(value)) if operand == "=" else value + " " + operand
+                value = str(eval(value)) if operand == "=" else value + " " + operand  # noqa: S307
                 self.value = value.removesuffix(".0")
 
     @classmethod
