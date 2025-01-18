@@ -15,8 +15,8 @@ description = "calculator on NiceGUI"
 license = {text = "Apache-2.0"}
 name = "nicegui-calculator"
 readme = "README.md"
-requires-python = ">=3.11"
-version = "0.1.3"
+requires-python = ">=3.12"
+version = "0.1.4"
 
 [project.urls]
 homepage = "https://github.com/SaitoTsutomu/nicegui-calculator"
@@ -37,7 +37,7 @@ ignore_missing_imports = true
 src = ["src"]
 
 [tool.ruff.lint]
-ignore = ["ANN", "C901", "CPY", "D", "E501", "PLR0912"]
+ignore = ["ANN", "C901", "CPY", "D", "DOC", "E501", "PLR0912"]
 preview = true
 select = ["ALL"]
 

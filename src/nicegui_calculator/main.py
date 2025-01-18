@@ -4,6 +4,7 @@ from .calculator import Calculator
 
 
 def main():
+    """電卓アプリ起動"""
     calculator = Calculator()
     ui.button.default_classes("rounded-full w-14 text-white")
     c_main, c_top, c_right = "bg-grey-8", "bg-blue-2 text-black", "bg-orange-5"

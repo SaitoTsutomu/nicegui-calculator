@@ -2,10 +2,13 @@ import re
 
 
 class Calculator:
+    """電卓"""
+
     def __init__(self):
         self.value = "0"
 
     def act(self, e):
+        """ボタン押下"""
         match e.sender.text if hasattr(e, "sender") else e:
             case num if "0" <= num <= "9":
                 value = self.value
@@ -37,10 +40,12 @@ class Calculator:
 
     @classmethod
     def trim_operand(cls, value: str):
+        """末尾の演算子削除"""
         return re.sub(r" [/*\-+]$", "", value)
 
     @classmethod
     def calc(cls, keys: list[str]) -> str:
+        """一連の計算"""
         self = cls()
         for key in keys:
             self.act(key)

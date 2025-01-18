@@ -18,5 +18,6 @@ from nicegui_calculator import Calculator
     ],
 )
 def test_calc(keys, expected):
+    """計算のテスト"""
     actual = Calculator.calc(keys)
     assert actual == expected
