@@ -1,3 +1,5 @@
+"""nicegui_calculator"""
+
 from importlib.metadata import metadata
 
 from .calculator import Calculator

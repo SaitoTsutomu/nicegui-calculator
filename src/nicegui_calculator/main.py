@@ -1,9 +1,11 @@
+"""電卓アプリ"""
+
 from nicegui import ui
 
 from .calculator import Calculator
 
 
-def main():
+def main() -> None:
     """電卓アプリ起動"""
     calculator = Calculator()
     ui.button.default_classes("rounded-full w-14 text-white")

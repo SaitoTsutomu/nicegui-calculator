@@ -1,13 +1,20 @@
+"""電卓の計算機能"""
+
 import re
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from nicegui import events
 
 
 class Calculator:
     """電卓"""
 
-    def __init__(self):
+    def __init__(self) -> None:
+        """初期化"""
         self.value = "0"
 
-    def act(self, e):
+    def act(self, e: "events.ClickEventArguments") -> None:  # noqa: C901
         """ボタン押下"""
         match e.sender.text if hasattr(e, "sender") else e:
             case num if "0" <= num <= "9":
@@ -39,7 +46,7 @@ class Calculator:
                 self.value = value.removesuffix(".0")
 
     @classmethod
-    def trim_operand(cls, value: str):
+    def trim_operand(cls, value: str) -> str:
         """末尾の演算子削除"""
         return re.sub(r" [/*\-+]$", "", value)
 

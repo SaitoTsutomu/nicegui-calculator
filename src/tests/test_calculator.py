@@ -1,3 +1,5 @@
+"""テスト"""
+
 # flake8: noqa: S101
 import pytest
 
@@ -17,7 +19,7 @@ from nicegui_calculator import Calculator
         ([*"2*3=4+5="], "69"),
     ],
 )
-def test_calc(keys, expected):
+def test_calc(keys: list[str], expected: str) -> None:
     """計算のテスト"""
     actual = Calculator.calc(keys)
     assert actual == expected
