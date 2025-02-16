@@ -8,7 +8,7 @@ classifiers = [
   "Topic :: Scientific/Engineering",
 ]
 dependencies = [
-  "nicegui>=2.11.0",
+  "nicegui>=2.11.1",
   "pywebview>=5.4",
 ]
 description = "calculator on NiceGUI"
@@ -16,7 +16,7 @@ license = {text = "Apache-2.0"}
 name = "nicegui-calculator"
 readme = "README.md"
 requires-python = ">=3.12"
-version = "0.1.4"
+version = "0.1.5"
 
 [project.urls]
 homepage = "https://github.com/SaitoTsutomu/nicegui-calculator"
